@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Paprika&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* font-family: 'Dancing Script', cursive; */
+/* font-family: 'Paprika', cursive; */
+/* font-family: 'Quicksand', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+body{
+    color: #1d1d1d;
+}
+a {
+    color: unset;
+    text-decoration: unset;
+}
+
+/* BACKGROUND */
+#pageContainer {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background-attachment: fixed;
+    padding: 5vh 4vw;
+}
+
+/* CONTAINER */
+#container {
+    width: 100%;
+    height: 100%;
+    background-color: #fbfbfb;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* NAVBAR */
+#navbar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 10px 100px;
+}
+#logo {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo .kalatea{
+    font-family: 'Paprika', cursive;
+    font-size: 32px;
+    letter-spacing: 3px;
+}
+#logo .clothes{
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+}
+#links {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+}
+#links button {
+    color: #1d1d1d;
+}
+#cart {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 130px;
+
+    padding: 10px 15px;
+    color: #fbfbfb;
+    background-color: #1d1d1d;
+}
