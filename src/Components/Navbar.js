@@ -14,7 +14,8 @@ const Navbar = () => {
             </div>
         </Link>
         <div id='links'>
-            <MenuProductos />
+            <MenuProductos item1={'Remeras'} item2={'Pantalones'} item3={'Zapatillas'} etiqueta={'Productos'} />
+            <MenuProductos item1={'Nike'} item2={'Adidas'} item3={'Vans'} etiqueta={'Marcas'} />
             <Link to={'/nosotros'}><Button variant="text">Nosotros</Button></Link>
             <Link to={'/contactanos'}><Button variant="text">Contactanos</Button></Link>
         </div>

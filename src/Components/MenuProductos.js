@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
-const MenuProductos = () => {
+const MenuProductos = ({item1, item2, item3, etiqueta}) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -22,7 +22,7 @@ const MenuProductos = () => {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        Productos
+        {etiqueta}
       </Button>
       <Menu
         id="basic-menu"
@@ -30,9 +30,9 @@ const MenuProductos = () => {
         open={open}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>Remeras</MenuItem>
-        <MenuItem onClick={handleClose}>Pantalones</MenuItem>
-        <MenuItem onClick={handleClose}>Zapatillas</MenuItem>
+        <MenuItem onClick={handleClose}>{item1}</MenuItem>
+        <MenuItem onClick={handleClose}>{item2}</MenuItem>
+        <MenuItem onClick={handleClose}>{item3}</MenuItem>
       </Menu>
     </>
   );
