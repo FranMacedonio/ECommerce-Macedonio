@@ -22,7 +22,9 @@ a {
 #pageContainer {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background: #000000;
+    background: -webkit-linear-gradient(to top, #434343, #000000);
+    background: linear-gradient(to top, #434343, #000000);
     background-attachment: fixed;
     padding: 5vh 4vw;
 }
@@ -33,6 +35,7 @@ a {
     height: 100%;
     background-color: #fbfbfb;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
 }
 
 /* NAVBAR */
@@ -53,7 +56,6 @@ a {
 #logo .kalatea{
     font-family: 'Paprika', cursive;
     font-size: 32px;
-    letter-spacing: 3px;
 }
 #logo .clothes{
     font-family: 'Dancing Script', cursive;
@@ -79,4 +81,70 @@ a {
     padding: 10px 15px;
     color: #fbfbfb;
     background-color: #1d1d1d;
+}
+
+/* HOME */
+#homeContainer{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#homeImg{
+    width: 90%;
+    height: 50vh;
+    background-image: url('https://images5.alphacoders.com/492/thumb-1920-492030.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 30px 0;
+}
+.homeProds{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 60px 0;
+}
+.imgContainer{
+    position: relative;
+}
+.homeProds .imgHomeProds{
+    filter: grayscale(70%);
+    display: block;
+    width: 30vw;
+    height: auto;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.7);
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #1d1d1d;
+}
+.imgContainer:hover .overlay {
+    opacity: 1;
+}
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.derecha {
+    padding-right: 100px;
+}
+.izquierda {
+    padding-left: 100px;
 }

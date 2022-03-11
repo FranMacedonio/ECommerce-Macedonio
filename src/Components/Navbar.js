@@ -9,8 +9,8 @@ const Navbar = () => {
     <div id='navbar'>
         <Link to={'/'}>
             <div id='logo'>
-                <div className='kalatea'>Kalatea</div>
-                <div className='clothes'>Clothes</div>
+                <div className='kalatea'>N.A.V</div>
+                <div className='clothes'>Es con vuelo</div>
             </div>
         </Link>
         <div id='links'>
