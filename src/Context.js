@@ -7,6 +7,8 @@ const reducer = (state, action) => {
     switch (action.type){
         case 'ADD':
             return [...state, action.prod]
+        default:
+            throw new Error (`unknow action ${action.type}`);
     }
 };
 

@@ -5,8 +5,10 @@ import { collection, query, getDocs } from 'firebase/firestore';
 
 
 const Home = () => {
-
+  
   const [productos, setProductos] = useState([]);
+
+  console.log(productos)
 
   useEffect(() => {
     const getProductos = async () => {
@@ -24,7 +26,7 @@ const Home = () => {
   return (
     <div id='homeContainer'>
       <div id='homeImg'></div>
-      <div className='homeProds derecha'>
+      <div className='homeProds'>
         <div className='imgContainer'>
           <img className='imgHomeProds' src='https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/MA_00658277_vwlk3l.jpg' alt='Niño patineta'/>
           <div className="overlay">
@@ -34,10 +36,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <CardComponent data={productos.find( producto => producto.categoria === 'remeras')} />
+        { productos.length === 0 ? null : <CardComponent data={productos.find( producto => producto.categoria === 'remeras')} />}
       </div>
-      <div className='homeProds izquierda'>
-        <CardComponent data={productos.find( producto => producto.categoria === 'pantalones')} />
+      <div className='homeProds'>
+        { productos.length === 0 ? null : <CardComponent data={productos.find( producto => producto.categoria === 'pantalones')} />}
         <div className='imgContainer'>
           <img className='imgHomeProds' src='https://c.stocksy.com/a/fG0800/z9/1907657.jpg' alt='Niño patineta'/>
           <div className="overlay">
@@ -48,7 +50,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className='homeProds derecha'>
+      <div className='homeProds'>
         <div className='imgContainer'>
           <img className='imgHomeProds' src='https://everythingbeaches.com/wp-content/uploads/2020/12/a-man-bodyboarding-on-the-sea.jpg' alt='Niño patineta'/>
           <div className="overlay">
@@ -58,7 +60,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <CardComponent data={productos.find( producto => producto.categoria === 'zapatillas')} />
+        { productos.length === 0 ? null : <CardComponent data={productos.find( producto => producto.categoria === 'zapatillas')} />}
       </div>
     </div>
   )

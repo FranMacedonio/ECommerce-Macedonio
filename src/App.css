@@ -102,10 +102,10 @@ a {
 .homeProds{
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 70%;
-    margin: 60px 0;
+    margin: 20px 0;
 }
 .imgContainer{
     position: relative;
@@ -141,10 +141,4 @@ a {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
-}
-.derecha {
-    padding-right: 100px;
-}
-.izquierda {
-    padding-left: 100px;
 }
