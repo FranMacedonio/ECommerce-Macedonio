@@ -1,23 +1,25 @@
 import * as React from 'react';
 import { Card, CardContent, CardMedia, Typography, CardActionArea} from '@mui/material';
 
-const CardComponent = () => {
+const CardComponent = ({data}) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, textAlign: 'center' }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="300"
-          image="https://www.liberato.com.py/storage/lbb-010-1.jpg"
-          alt="green iguana"
+          image={data.imagen}
+          alt={data.titulo}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
+            {data.titulo}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            En stock: {data.stock}
+          </Typography>
+          <Typography gutterBottom variant="h5" component="div">
+            ${data.precio}
           </Typography>
         </CardContent>
       </CardActionArea>
