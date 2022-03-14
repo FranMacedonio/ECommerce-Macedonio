@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import { collection, query, where, getDocs, documentId } from 'firebase/firestore';
 import { db } from '../firebase';
-import CardComponent from '../Components/CardComponent';
+import DetailCardComponent from '../Components/DetailCardComponent';
 
 const ItemDetail = () => {
   const [productos, setProductos] = useState([]);
@@ -28,9 +28,8 @@ const ItemDetail = () => {
     <>
       {productos.map( datos => {
         return(
-          <div key={datos.id}>
-            <h1>{datos.titulo}</h1>
-            <CardComponent data={datos}/>
+          <div className='detailProducto' key={datos.id}>
+            <DetailCardComponent data={datos} />
           </div>
         );
       })}
