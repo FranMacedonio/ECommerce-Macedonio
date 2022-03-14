@@ -142,3 +142,21 @@ a {
     -ms-transform: translate(-50%, -50%);
     text-align: center;
 }
+
+/* PAGINAS */
+.paginas{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.productos{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+.producto{
+    margin: 15px 0;
+}
