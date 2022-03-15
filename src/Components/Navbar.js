@@ -20,7 +20,6 @@ const Navbar = () => {
                 <MenuProductos opcion={'productos'} />
                 <MenuProductos opcion={'marcas'} />
                 <Link to={'/nosotros'}><Button variant="text">Nosotros</Button></Link>
-                <Link to={'/contactanos'}><Button variant="text">Contactanos</Button></Link>
             </div>
             <Link to={'/carrito'}>
                 <div id='cart'>
