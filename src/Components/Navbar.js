@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return (
         <div id='navbar'>
-            <Link to={'/'}>
+            <Link className='botonExit' to={'/'}>
                 <div id='logo'>
                     <div className='kalatea'>N.A.V</div>
                     <div className='clothes'>Es con vuelo</div>
@@ -19,7 +19,7 @@ const Navbar = () => {
             <div id='links'>
                 <MenuProductos opcion={'productos'} />
                 <MenuProductos opcion={'marcas'} />
-                <Link to={'/nosotros'}><Button variant="text">Nosotros</Button></Link>
+                <Link className='botonExit' to={'/nosotros'}><Button variant="text">Nosotros</Button></Link>
             </div>
             <Link to={'/carrito'}>
                 <div id='cart'>

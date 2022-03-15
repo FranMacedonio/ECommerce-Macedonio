@@ -53,7 +53,7 @@ const Carrito = () => {
   const formularioVacio = () => {
     return Swal.fire({
       position: 'center',
-      icon: 'error',
+      
       title: 'Tenes que rellenar todo lo que pide.',
       showConfirmButton: false,
       timer: 2000
@@ -79,7 +79,7 @@ const Carrito = () => {
     }
   };
 
-  if(cart.length === 0){
+  if(cart.length === 0 && idCompra === ''){
     return (
       <div id='carritoVacio'>
         <h1>Parece que tu carrito esta vacio</h1>
@@ -92,7 +92,7 @@ const Carrito = () => {
         <img alt='Parineta' src='https://www.todoskate.com/wp-content/uploads/2019/10/partes_tabla_skate-1-1024x300.jpg' />
       </div>
     );
-  }else{
+  }else if (cart.length > 0 && idCompra === ''){
     return (
       <>
         <div id='carrito'>
@@ -143,16 +143,26 @@ const Carrito = () => {
               </div>
           </Box>
         </div>
-        <div id='carritoPost'>
-          {idCompra && (
-            <Stack sx={{ width: '80%' }} spacing={2}>
-              <Alert severity='success'>
-                  ¡Gracias por su compra! Guarda el siguiente codigo para ver el resumen del pedido cuando quieras: {`${idCompra}`}
-              </Alert>
-            </Stack>
-          )}
-        </div>
       </>
+    );
+  }else if(idCompra !== ''){
+    const botones = document.querySelectorAll('.botonExit')
+    for( let i = 0; i < botones.length; i++){
+      botones[i].addEventListener('click', () => {
+        dispatch({ type: 'CLEAR'});
+      })
+    }
+
+    return (
+      <div id='carritoPost'>
+        {idCompra && (
+          <Stack sx={{ width: '80%' }} spacing={2}>
+            <Alert severity='success'>
+                ¡Gracias por su compra! Guarda el siguiente codigo para ver el resumen del pedido cuando quieras: {`${idCompra}`}
+            </Alert>
+          </Stack>
+        )}
+      </div>
     );
   }
 };

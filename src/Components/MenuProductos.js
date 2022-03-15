@@ -19,6 +19,7 @@ const MenuProductos = ({opcion}) => {
       <>
         <Button
           id="basic-button"
+          className='botonExit'
           aria-controls={open ? 'basic-menu' : undefined}
           aria-haspopup="true"
           aria-expanded={open ? 'true' : undefined}
@@ -45,6 +46,7 @@ const MenuProductos = ({opcion}) => {
       <>
         <Button
           id="basic-button"
+          className='botonExit'
           aria-controls={open ? 'basic-menu' : undefined}
           aria-haspopup="true"
           aria-expanded={open ? 'true' : undefined}
