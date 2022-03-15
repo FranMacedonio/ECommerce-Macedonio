@@ -27,8 +27,8 @@ const Categoria = () => {
     if (categoria === 'remeras'){
         return (
             <div className='paginas'>
-                <div>Remeras</div>
-                <div>Aca conseguis unas remeras tuki tuki</div>
+                <h1>Remeras</h1>
+                <h3>En N.A.V te ofrecemos remeras de alta calidad para que vayas contento por la vida</h3>
                 <div className='productos'>
                     {productos.map( datos => {
                         return(
@@ -44,8 +44,8 @@ const Categoria = () => {
     if (categoria === 'pantalones'){
         return (
             <div className='paginas'>
-                <div>Pantalones</div>
-                <div>Aca conseguis unos pantalones tuki tuki</div>
+                <h1>Pantalones</h1>
+                <h3>N.A.V es tu tienda favorita a la hora de buscar pantalones con estilo</h3>
                 <div className='productos'>
                     {productos.map( datos => {
                         return(
@@ -61,8 +61,8 @@ const Categoria = () => {
     if (categoria === 'zapatillas'){
         return (
             <div className='paginas'>
-                <div>Zapatillas</div>
-                <div>Aca conseguis unas zapatillas tuki tuki</div>
+                <h1>Zapatillas</h1>
+                <h3>Nos alegramos de que confies en N.A.V cuando se trata de comprar zapatillas</h3>
                 <div className='productos'>
                     {productos.map( datos => {
                         return(

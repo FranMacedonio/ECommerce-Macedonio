@@ -28,8 +28,7 @@ const Marca = () => {
     if (marca === 'nike'){
         return (
             <div className='paginas'>
-                <div>Nike</div>
-                <div>Aca conseguis nike tuki tuki</div>
+                <div id='nike'></div>
                 <div className='productos'>
                     {productos.map( datos => {
                         return(
@@ -45,8 +44,7 @@ const Marca = () => {
     if (marca === 'adidas'){
         return (
             <div className='paginas'>
-                <div>Adidas</div>
-                <div>Aca conseguis adidas tuki tuki</div>
+                <div id='adidas'></div>
                 <div className='productos'>
                     {productos.map( datos => {
                         return(
@@ -62,8 +60,7 @@ const Marca = () => {
     if (marca === 'vans'){
         return (
             <div className='paginas'>
-                <div>Vans</div>
-                <div>Aca conseguis vans tuki tuki</div>
+                <div id='vans'></div>
                 <div className='productos'>
                     {productos.map( datos => {
                         return(

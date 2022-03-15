@@ -156,6 +156,7 @@ a {
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
+    margin: 50px 0;
 }
 .productos{
     display: flex;
@@ -205,6 +206,37 @@ a {
     border: none;
     padding: 5px 10px;
     margin: 5px 0;
+}
+
+#nike{
+    width: 70%;
+    height: 300px;
+    background-image: url('https://i.pinimg.com/originals/41/e2/b6/41e2b604186c64d7604662d2234a2f99.jpg');
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    border: 3px solid black;
+    background-color: white;
+}
+#adidas{
+    width: 70%;
+    height: 300px;
+    background-image: url('https://www.logaster.com/it/blog/wp-content/uploads/sites/13/2020/03/Adidas-Logo-old-1-1024x576-min-1024x576.jpg');
+    background-repeat: no-repeat;
+    background-size: 38%;
+    background-position: center;
+    border: 3px solid black;
+    background-color: white;
+}
+#vans{
+    width: 70%;
+    height: 300px;
+    background-image: url('https://www.newton.com.tw/img/1/0b8/cGcq5yNwUmYzQmNzU2Y1ETYldzYwQmMhZjNlRjY5QzM0MDOyEmM0QGZyQjMv0WZ0l2LjlGcvU2apFmYv02bj5SdklWYi5yYyN3Ztl2LvoDc0RHa.jpg');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    border: 3px solid black;
+    background-color: #f6f6f6;
 }
 
 /* CONTADOR */
