@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useCart, useDispatchCart } from '../Context';
 import CartItem from '../Components/CartItem';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import { collection, addDoc } from 'firebase/firestore';
+import { db } from '../firebase';
+
+const initialState = {
+  nombre:'',
+  apellido:'',
+  celular:'',
+  mail:'',
+  mailVerificacion:''
+};
 
 const Carrito = () => {
   const cart = useCart();
   const dispatch = useDispatchCart();
-
-  console.log(cart)
+  const precioTotal = cart.reduce((total, b) => total + b.precio * b.cantidad, 0);
 
   const remove = index => {
     dispatch({ type: 'REMOVE', index});
@@ -16,12 +27,37 @@ const Carrito = () => {
     dispatch({ type: 'CLEAR'});
   };
 
+  const [values, setValues] = useState(initialState);
+  const [idCompra, setIdCompra] = useState('');
 
+  console.log(idCompra)
 
+  const onChange = e => {
+    const {value, name} = e.target;
+    setValues({...values, [name]: value});
+  };
+  const onSubmit = async e => {
+    e.preventDefault();
+    const docRef = await addDoc(collection(db, "compra"), {
+      comprador: values,
+      productos: cart,
+      total: precioTotal,
+    });
+    setIdCompra(docRef.id);
+    setValues(initialState);
+  };
 
-
-
-
+  // useEffect(() => {
+  //   const botonFormulario = document.querySelector('#formulario button');
+  //   if((values.nombre && values.apellido && values.celular && values.mail && values.mailVerificacion) !== ''){
+  //     botonFormulario.disabled = false;
+  //   }else{
+  //     botonFormulario.disabled = true;
+  //     botonFormulario.addEventListener('click', () => {
+  //       console.log('tocaste')
+  //     })
+  //   }
+  // }, [values]);
 
   if(cart.length === 0){
     return (
@@ -39,7 +75,7 @@ const Carrito = () => {
   }else{
     return (
       <div id='carrito'>
-        <h1>Tu carrito tiene items</h1>
+        <h2>Resumen de compra</h2>
         <table>
           <thead>
             <tr>
@@ -60,14 +96,30 @@ const Carrito = () => {
           </tbody>
           <tfoot>
             <tr>
-              <td><button onClick={clear}>Limpiar Carrito</button></td>
+              <td><button className='limpiar' onClick={clear}>Limpiar Carrito</button></td>
               <td></td>
               <td></td>
-              <td>Total a pagar:</td>
-              <td>$250</td>
+              <td><strong>Total a pagar:</strong></td>
+              <td><strong>${precioTotal}</strong></td>
             </tr>
           </tfoot>
         </table>
+        <Box
+        component="form"
+        onSubmit={onSubmit}
+        noValidate
+        autoComplete="off"
+        id='formularioContainer'
+        >
+            <div id='formulario'>
+                <TextField className='formularioInput' onChange={onChange} value={values.nombre} name='nombre' id="filled-basic" label="Nombre" variant="filled" />
+                <TextField className='formularioInput' onChange={onChange} value={values.apellido} name='apellido' id="filled-basic" label="Apellido" variant="filled" />
+                <TextField className='formularioInput' onChange={onChange} value={values.celular} name='celular' id="filled-basic" label="Celular" variant="filled" />
+                <TextField className='formularioInput' onChange={onChange} value={values.mail} name='mail' id="filled-basic" label="Email" variant="filled" />
+                <TextField className='formularioInput' onChange={onChange} value={values.mailVerificacion} name='mailVerificacion' id="filled-basic" label="Verificar Email" variant="filled" />
+                <button className='limpiar'>Realizar Compra</button>
+            </div>
+        </Box>
       </div>
     );
   }

@@ -9,7 +9,7 @@ const CartItem = ({producto, index, remove}) => {
         <td>${producto.precio}</td>
         <td>{producto.cantidad}</td>
         <td>${producto.precio * producto.cantidad}</td>
-        <td onClick={() => remove(index)}><DeleteOutlineOutlinedIcon /></td>
+        <td onClick={() => remove(index)}><DeleteOutlineOutlinedIcon id='borrar' /></td>
     </tr>
   );
 };

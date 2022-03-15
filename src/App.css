@@ -268,11 +268,57 @@ a {
     flex-flow: column nowrap;
     justify-content: space-around;
     align-items: center;
+    margin: 30px 0;
 }
 #carrito table{
     margin: 50px;
     text-align: center;
+    width: 80%;
+    border: 1px solid;
+    padding: 10px;
+    background-color: #ebebeb;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 #carrito table img{
     width: 70px;
+}
+#borrar{
+    color: rgb(151, 10, 10);
+    cursor: pointer;
+    transition: 100ms ease;
+}
+#borrar:hover{
+    color: rgb(219, 55, 14);
+}
+.limpiar{
+    border: none;
+    padding: 10px 15px;
+    margin: 15px 0;
+    background-color: #1d1d1d;
+    color: #fbfbfb;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 150ms ease;
+    cursor: pointer;
+}
+.limpiar:hover{
+    background-color: #333333;
+    color: #ffffff;
+}
+#formularioContainer{
+    width: 100%;
+}
+#formulario{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.formularioInput{
+    width: 60%;
+}
+#formulario button:disabled{
+    background-color: #1d1d1d;
+    color: #971717;
 }
