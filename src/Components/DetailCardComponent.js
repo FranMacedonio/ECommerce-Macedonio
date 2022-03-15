@@ -6,16 +6,20 @@ import { useDispatchCart, useCart } from '../Context';
 import Swal from 'sweetalert2'
 
 const DetailCardComponent = ({data}) => {
-
   const cart = useCart();
   const dispatch = useDispatchCart();
 
-  console.log(cart)
-  console.log(dispatch)
+  let item = {cantidad: 0};
+  if(cart.length > 0 && cart.find(obj => obj.titulo === data.titulo)){
+    item = cart.find(obj => obj.titulo === data.titulo);
+  }
+  let stockReal = data.stock - item.cantidad;
 
   const addToCart = () => {
     const cantidad = parseInt(document.querySelector('#contador').textContent);
     const repetido = cart.find(name => name.titulo === data.titulo);
+    const stock = parseInt(document.querySelector('#stock').textContent);
+    const stockContent = document.querySelector('#stock');
 
     if(cantidad === 0){
       Swal.fire({
@@ -29,6 +33,7 @@ const DetailCardComponent = ({data}) => {
       const idxRepetido = cart.indexOf(repetido);
       cart[idxRepetido].cantidad = cart[idxRepetido].cantidad + cantidad;
       dispatch({ type: 'REFRESH', cart});
+      stockContent.innerHTML = stock - cantidad;
     }else{
       const prod = {
         titulo: data.titulo,
@@ -38,6 +43,7 @@ const DetailCardComponent = ({data}) => {
         id: data.id
       };
       dispatch({ type: 'ADD', prod });
+      stockContent.innerHTML = stock - cantidad;
     };
   };
 
@@ -56,7 +62,7 @@ const DetailCardComponent = ({data}) => {
           {data.descripcion}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Cantidad en stock <span id='stock'>{data.stock}</span>
+          Cantidad en stock <span id='stock'>{(cart.length > 0 && cart.find(obj => obj.titulo === data.titulo)) ? stockReal : data.stock}</span>
         </Typography>
         <ItemCount />
         <Typography gutterBottom variant="h5" component="div">

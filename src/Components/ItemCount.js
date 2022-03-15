@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
 
@@ -15,10 +15,17 @@ const ItemCount = () => {
             setCounter(counter - 1);
         }
     };
-    // const cero = () => {
-    //     const agregar = document.querySelector('#agregar');
 
-    // }
+    useEffect(() => {
+        const agregar = document.querySelector('#agregar');
+        agregar.addEventListener('click', () => {
+            agregar.disabled = true;
+            setTimeout(() => {
+                setCounter(0);
+                agregar.disabled = false;
+            }, 500)
+        });
+    }, []);
 
     return (
     <div id='contadorContainer'>
