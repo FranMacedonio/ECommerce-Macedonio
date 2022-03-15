@@ -9,6 +9,13 @@ const reducer = (state, action) => {
             return [...state, action.prod];
         case 'REFRESH':
             return [...state];
+        case 'REMOVE':
+            const newArr= [...state];
+            newArr.splice(action.index, 1);
+            return newArr;
+        case 'CLEAR':
+            const emptyArr = [];
+            return emptyArr;
         default:
             throw new Error (`unknow action ${action.type}`);
     }

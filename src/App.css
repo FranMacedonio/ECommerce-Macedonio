@@ -263,3 +263,16 @@ a {
     align-items: center;
     width: 50%;
 }
+#carrito{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+#carrito table{
+    margin: 50px;
+    text-align: center;
+}
+#carrito table img{
+    width: 70px;
+}
