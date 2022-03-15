@@ -6,7 +6,9 @@ const CartDispatchContext = createContext();
 const reducer = (state, action) => {
     switch (action.type){
         case 'ADD':
-            return [...state, action.prod]
+            return [...state, action.prod];
+        case 'REFRESH':
+            return [...state];
         default:
             throw new Error (`unknow action ${action.type}`);
     }

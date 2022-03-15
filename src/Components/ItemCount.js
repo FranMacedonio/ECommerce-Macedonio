@@ -15,6 +15,10 @@ const ItemCount = () => {
             setCounter(counter - 1);
         }
     };
+    // const cero = () => {
+    //     const agregar = document.querySelector('#agregar');
+
+    // }
 
     return (
     <div id='contadorContainer'>

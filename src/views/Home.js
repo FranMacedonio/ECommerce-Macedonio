@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import CardComponent from '../Components/CardComponent';
 import { db } from '../firebase';
 import { collection, query, getDocs } from 'firebase/firestore';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -36,10 +36,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-        { productos.length === 0 ? null : <CardComponent data={productos.find( producto => producto.categoria === 'remeras')} />}
+        { productos.length === 0 ? null : <Link to={'/categoria/remeras'}><img alt='remera' src={productos.find( producto => producto.categoria === 'remeras').imagen} /></Link>}
       </div>
       <div className='homeProds'>
-        { productos.length === 0 ? null : <CardComponent data={productos.find( producto => producto.categoria === 'pantalones')} />}
+        { productos.length === 0 ? null : <Link to={'/categoria/pantalones'}><img alt='pantalon' src={productos.find( producto => producto.categoria === 'pantalones').imagen} /></Link>}
         <div className='imgContainer'>
           <img className='imgHomeProds' src='https://c.stocksy.com/a/fG0800/z9/1907657.jpg' alt='Niño patineta'/>
           <div className="overlay">
@@ -60,7 +60,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        { productos.length === 0 ? null : <CardComponent data={productos.find( producto => producto.categoria === 'zapatillas')} />}
+        { productos.length === 0 ? null : <Link to={'/categoria/zapatillas'}><img alt='zapatilla' src={productos.find( producto => producto.categoria === 'zapatillas').imagen} /></Link>}
       </div>
     </div>
   )
