@@ -5,11 +5,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 //VIEWS
 import Home from './views/Home';
 import Nosotros from './views/Nosotros';
-import Contactanos from './views/Contactanos';
 import Carrito from './views/Carrito';
 import Categoria from './views/Categoria';
 import Marca from './views/Marca';
 import ItemDetail from './views/ItemDetail';
+import Resumen from './views/Resumen';
 
 const App = () => {
   return (
@@ -21,6 +21,7 @@ const App = () => {
             <Route path='/' element={<Home />} />
             <Route path='/nosotros' element={<Nosotros />} />
             <Route path='/carrito' element={<Carrito />} />
+            <Route path='/resumen' element={<Resumen />} />
             <Route path='/categoria/:categoria' element={<Categoria />} />
             <Route path='/marca/:marca' element={<Marca />} />
             <Route path='/detalles/:id' element={<ItemDetail />} />

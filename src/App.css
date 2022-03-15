@@ -144,6 +144,7 @@ a {
 }
 .imagenHome{
     transition: 150ms ease-in;
+    width: 400px;
 }
 .imagenHome:hover {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
@@ -275,7 +276,7 @@ a {
     align-items: center;
     margin: 30px 0;
 }
-#carrito table{
+#carrito table, .resumenTable{
     margin: 50px;
     text-align: center;
     width: 80%;
@@ -284,7 +285,7 @@ a {
     background-color: #ebebeb;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
-#carrito table img{
+#carrito table img, .resumenTable img{
     width: 70px;
 }
 #borrar{
@@ -341,6 +342,23 @@ a {
     align-items: center;
     margin: 30px 0;
 }
-.displayNone{
-    display: none;
+
+/* RESUMEN */
+#resumen{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+}
+#resumen form{
+    margin: 25px 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#resumen input{
+    width: 300px;
+    text-align: center;
 }
