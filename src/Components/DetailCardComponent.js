@@ -3,7 +3,7 @@ import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom';
 import { useDispatchCart, useCart } from '../Context';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
 const DetailCardComponent = ({data}) => {
   const cart = useCart();
@@ -69,7 +69,7 @@ const DetailCardComponent = ({data}) => {
           ${data.precio}
         </Typography>
         <button onClick={addToCart} className='boton' id='agregar'>Añadir al carrito</button>
-        <Link to={'/carrito'}><button className='boton'>Comprar</button></Link>
+        <Link to={'/carrito'}><button className='botonCompra'>Comprar</button></Link>
       </CardContent>
     </Card>
   );

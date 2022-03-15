@@ -200,6 +200,11 @@ a {
     padding: 5px 10px;
     margin: 5px 0;
 }
+.botonCompra{
+    border: none;
+    padding: 5px 10px;
+    margin: 5px 0;
+}
 
 /* CONTADOR */
 #contadorContainer{
@@ -301,6 +306,17 @@ a {
     transition: 150ms ease;
     cursor: pointer;
 }
+.limpiarDisabled{
+    border: none;
+    padding: 10px 15px;
+    margin: 15px 0;
+    background-color: #333333;
+    color: #bbbbbb;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 150ms ease;
+    cursor: pointer;
+}
 .limpiar:hover{
     background-color: #333333;
     color: #ffffff;
@@ -318,7 +334,13 @@ a {
 .formularioInput{
     width: 60%;
 }
-#formulario button:disabled{
-    background-color: #1d1d1d;
-    color: #971717;
+#carritoPost{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+.displayNone{
+    display: none;
 }
