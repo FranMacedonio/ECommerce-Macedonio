@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
+import ItemCount from './ItemCount';
 
 const DetailCardComponent = ({data}) => {
   return (
@@ -13,16 +14,17 @@ const DetailCardComponent = ({data}) => {
         <Typography gutterBottom variant="h5" component="div">
           {data.titulo}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography sx={{margin: '20px'}} variant="body2" color="text.secondary">
           {data.descripcion}
         </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Cantidad en stock <span id='stock'>{data.stock}</span>
+        </Typography>
+        <ItemCount />
         <Typography gutterBottom variant="h5" component="div">
           ${data.precio}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Cantidad en stock {data.stock}
-        </Typography>
-        <h1>ACA VA EL CONTADOR</h1>
+        <button id='agregar'>Añadir al carrito</button>
       </CardContent>
     </Card>
   );
