@@ -23,7 +23,7 @@ const ItemCount = () => {
             setTimeout(() => {
                 setCounter(0);
                 agregar.disabled = false;
-            }, 500)
+            }, 200)
         });
     }, []);
 

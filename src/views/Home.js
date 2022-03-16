@@ -8,8 +8,6 @@ const Home = () => {
   
   const [productos, setProductos] = useState([]);
 
-  console.log(productos)
-
   useEffect(() => {
     const getProductos = async () => {
       const array = [];

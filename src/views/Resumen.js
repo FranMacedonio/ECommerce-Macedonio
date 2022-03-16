@@ -61,11 +61,18 @@ const Resumen = () => {
                     </tbody>
                     <tfoot>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td><strong>Fecha de compra:</strong></td>
+                        <td><strong>{resumen.fecha}</strong></td>
                         <td></td>
                         <td><strong>Pagaste:</strong></td>
                         <td><strong>${precioTotal}</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cliente:</strong></td>
+                        <td><strong>{resumen.comprador.nombre + ' ' + resumen.comprador.apellido}</strong></td>
+                        <td><strong>DNI: {resumen.comprador.dni}</strong></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     </tfoot>
                 </table>

@@ -18,6 +18,7 @@ const initialState = {
   mail:'',
   mailVerificacion:''
 };
+const fecha = new Date().toDateString();
 
 const Carrito = () => {
   const cart = useCart();
@@ -42,18 +43,18 @@ const Carrito = () => {
     e.preventDefault();
     const docRef = await addDoc(collection(db, "compra"), {
       comprador: values,
+      fecha: fecha,
       productos: cart,
       total: precioTotal,
     });
     setIdCompra(docRef.id);
     setValues(initialState);
   };
-  console.log(idCompra)
 
   const formularioVacio = () => {
     return Swal.fire({
       position: 'center',
-      
+      icon: 'error',
       title: 'Tenes que rellenar todo lo que pide.',
       showConfirmButton: false,
       timer: 2000
@@ -146,13 +147,9 @@ const Carrito = () => {
       </>
     );
   }else if(idCompra !== ''){
-    const botones = document.querySelectorAll('.botonExit')
-    for( let i = 0; i < botones.length; i++){
-      botones[i].addEventListener('click', () => {
-        dispatch({ type: 'CLEAR'});
-      })
-    }
-
+    setTimeout(() => {
+      dispatch({ type: 'CLEAR'});
+    }, 1000);
     return (
       <div id='carritoPost'>
         {idCompra && (
