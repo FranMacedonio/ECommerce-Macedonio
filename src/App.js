@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 //VIEWS
 import Home from './views/Home';
-import Nosotros from './views/Nosotros';
 import Carrito from './views/Carrito';
 import Categoria from './views/Categoria';
 import Marca from './views/Marca';
@@ -19,7 +18,6 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/nosotros' element={<Nosotros />} />
             <Route path='/carrito' element={<Carrito />} />
             <Route path='/resumen' element={<Resumen />} />
             <Route path='/categoria/:categoria' element={<Categoria />} />

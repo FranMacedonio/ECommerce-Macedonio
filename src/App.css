@@ -56,10 +56,18 @@ a {
 #logo .kalatea{
     font-family: 'Paprika', cursive;
     font-size: 32px;
+    transition: color 150ms ease;
+}
+#logo:hover .kalatea{
+    color: #106ea5;
 }
 #logo .clothes{
     font-family: 'Paprika', cursive;
     font-size: 20px;
+    transition: color 150ms ease;
+}
+#logo:hover .clothes{
+    color: #b11111;
 }
 #links {
     display: flex;
