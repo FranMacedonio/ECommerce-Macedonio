@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ECommerce-Macedonio/static/css/main.fe3b3ae8.css",
+    "main.js": "/ECommerce-Macedonio/static/js/main.36eb06d3.js",
+    "index.html": "/ECommerce-Macedonio/index.html",
+    "main.fe3b3ae8.css.map": "/ECommerce-Macedonio/static/css/main.fe3b3ae8.css.map",
+    "main.36eb06d3.js.map": "/ECommerce-Macedonio/static/js/main.36eb06d3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fe3b3ae8.css",
+    "static/js/main.36eb06d3.js"
+  ]
+}
