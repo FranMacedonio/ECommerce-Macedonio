@@ -17,12 +17,12 @@ const App = () => {
         <div id='container'>
           <Navbar />
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/carrito' element={<Carrito />} />
-            <Route path='/resumen' element={<Resumen />} />
-            <Route path='/categoria/:categoria' element={<Categoria />} />
-            <Route path='/marca/:marca' element={<Marca />} />
-            <Route path='/detalles/:id' element={<ItemDetail />} />
+            <Route path='/ECommerce-Macedonio/' element={<Home />} />
+            <Route path='/ECommerce-Macedonio/carrito' element={<Carrito />} />
+            <Route path='/ECommerce-Macedonio/resumen' element={<Resumen />} />
+            <Route path='/ECommerce-Macedonio/categoria/:categoria' element={<Categoria />} />
+            <Route path='/ECommerce-Macedonio/marca/:marca' element={<Marca />} />
+            <Route path='/ECommerce-Macedonio/detalles/:id' element={<ItemDetail />} />
           </Routes>
         </div>
       </div>
