@@ -69,7 +69,7 @@ const DetailCardComponent = ({data}) => {
           ${data.precio}
         </Typography>
         <button onClick={addToCart} className='boton' id='agregar'>Añadir al carrito</button>
-        <Link to={'/carrito'}><button className='botonCompra'>Comprar</button></Link>
+        <Link to={'/ECommerce-Macedonio/carrito'}><button className='botonCompra'>Comprar</button></Link>
       </CardContent>
     </Card>
   );

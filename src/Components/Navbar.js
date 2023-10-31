@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return (
         <div id='navbar'>
-            <Link className='botonExit' to={'/'}>
+            <Link className='botonExit' to={'/ECommerce-Macedonio/'}>
                 <div id='logo'>
                     <div className='kalatea'>N.A.V</div>
                     <div className='clothes'>Es con vuelo</div>
@@ -19,9 +19,9 @@ const Navbar = () => {
             <div id='links'>
                 <MenuProductos opcion={'productos'} />
                 <MenuProductos opcion={'marcas'} />
-                <Link className='botonExit' to={'/resumen'}><Button variant="text">Resumen de Compra</Button></Link>
+                <Link className='botonExit' to={'/ECommerce-Macedonio/resumen'}><Button variant="text">Resumen de Compra</Button></Link>
             </div>
-            <Link to={'/carrito'}>
+            <Link to={'/ECommerce-Macedonio/carrito'}>
                 <div id='cart'>
                     <ShoppingCartIcon />
                     <div>Carrito</div>

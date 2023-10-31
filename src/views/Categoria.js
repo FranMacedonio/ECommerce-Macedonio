@@ -33,7 +33,7 @@ const Categoria = () => {
                     {productos.map( datos => {
                         return(
                             <div key={datos.id} className='producto'>
-                            <Link to={`/detalles/${datos.id}`}><CardComponent data={datos} /></Link>
+                            <Link to={`/ECommerce-Macedonio/detalles/${datos.id}`}><CardComponent data={datos} /></Link>
                             </div>
                         )
                     })}
@@ -50,7 +50,7 @@ const Categoria = () => {
                     {productos.map( datos => {
                         return(
                             <div key={datos.id} className='producto'>
-                            <Link to={`/detalles/${datos.id}`}><CardComponent data={datos} /></Link>
+                            <Link to={`/ECommerce-Macedonio/detalles/${datos.id}`}><CardComponent data={datos} /></Link>
                             </div>
                         )
                     })}
@@ -67,7 +67,7 @@ const Categoria = () => {
                     {productos.map( datos => {
                         return(
                             <div key={datos.id} className='producto'>
-                            <Link to={`/detalles/${datos.id}`}><CardComponent data={datos} /></Link>
+                            <Link to={`/ECommerce-Macedonio/detalles/${datos.id}`}><CardComponent data={datos} /></Link>
                             </div>
                         )
                     })}

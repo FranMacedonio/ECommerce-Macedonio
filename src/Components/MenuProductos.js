@@ -33,9 +33,9 @@ const MenuProductos = ({opcion}) => {
           open={open}
           onClose={handleClose}
         >
-          <Link to={'/categoria/remeras'}><MenuItem onClick={handleClose}>Remeras</MenuItem></Link>
-          <Link to={'/categoria/pantalones'}><MenuItem onClick={handleClose}>Pantalones</MenuItem></Link>
-          <Link to={'/categoria/zapatillas'}><MenuItem onClick={handleClose}>Zapatillas</MenuItem></Link>
+          <Link to={'/ECommerce-Macedonio/categoria/remeras'}><MenuItem onClick={handleClose}>Remeras</MenuItem></Link>
+          <Link to={'/ECommerce-Macedonio/categoria/pantalones'}><MenuItem onClick={handleClose}>Pantalones</MenuItem></Link>
+          <Link to={'/ECommerce-Macedonio/categoria/zapatillas'}><MenuItem onClick={handleClose}>Zapatillas</MenuItem></Link>
         </Menu>
       </>
     );
@@ -60,9 +60,9 @@ const MenuProductos = ({opcion}) => {
           open={open}
           onClose={handleClose}
         >
-          <Link to={'/marca/nike'}><MenuItem onClick={handleClose}>Nike</MenuItem></Link>
-          <Link to={'/marca/adidas'}><MenuItem onClick={handleClose}>Adidas</MenuItem></Link>
-          <Link to={'/marca/vans'}><MenuItem onClick={handleClose}>Vans</MenuItem></Link>
+          <Link to={'/ECommerce-Macedonio/ECommerce-Macedonio/marca/nike'}><MenuItem onClick={handleClose}>Nike</MenuItem></Link>
+          <Link to={'/ECommerce-Macedonio/ECommerce-Macedonio/marca/adidas'}><MenuItem onClick={handleClose}>Adidas</MenuItem></Link>
+          <Link to={'/ECommerce-Macedonio/ECommerce-Macedonio/marca/vans'}><MenuItem onClick={handleClose}>Vans</MenuItem></Link>
         </Menu>
       </>
     );

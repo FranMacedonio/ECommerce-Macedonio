@@ -34,10 +34,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-        { productos.length === 0 ? <div style={{width: '400px'}}></div> : <Link to={'/categoria/remeras'}><img className='imagenHome' alt='remera' src={productos.find( producto => producto.categoria === 'remeras').imagen} /></Link>}
+        { productos.length === 0 ? <div style={{width: '400px'}}></div> : <Link to={'/ECommerce-Macedonio/categoria/remeras'}><img className='imagenHome' alt='remera' src={productos.find( producto => producto.categoria === 'remeras').imagen} /></Link>}
       </div>
       <div className='homeProds'>
-        { productos.length === 0 ? <div style={{width: '400px'}}></div> : <Link to={'/categoria/pantalones'}><img className='imagenHome' alt='pantalon' src={productos.find( producto => producto.categoria === 'pantalones').imagen} /></Link>}
+        { productos.length === 0 ? <div style={{width: '400px'}}></div> : <Link to={'/ECommerce-Macedonio/categoria/pantalones'}><img className='imagenHome' alt='pantalon' src={productos.find( producto => producto.categoria === 'pantalones').imagen} /></Link>}
         <div className='imgContainer'>
           <img className='imgHomeProds' src='https://c.stocksy.com/a/fG0800/z9/1907657.jpg' alt='Niño patineta'/>
           <div className="overlay">
@@ -58,7 +58,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        { productos.length === 0 ? <div style={{width: '400px'}}></div> : <Link to={'/categoria/zapatillas'}><img className='imagenHome' alt='zapatilla' src={productos.find( producto => producto.categoria === 'zapatillas').imagen} /></Link>}
+        { productos.length === 0 ? <div style={{width: '400px'}}></div> : <Link to={'/ECommerce-Macedonio/categoria/zapatillas'}><img className='imagenHome' alt='zapatilla' src={productos.find( producto => producto.categoria === 'zapatillas').imagen} /></Link>}
       </div>
     </div>
   )
